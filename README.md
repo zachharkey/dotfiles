@@ -1,10 +1,14 @@
-# Paul's dotfiles
+# Zach's dotfiles
 
-* I maintain this repo as *my* dotfiles, but I'm keenly aware people are using it for theirs.
-* You're quite welcome to make suggestions, however I may decline if it's not of personal value to me.
-* If you're starting off consider forking [mathias](https://github.com/mathiasbynens/dotfiles/) or [alrra](https://github.com/alrra/dotfiles/). paulmillr and gf3 also have great setups
+* I maintain this repo as *my* dotfiles. I forked it from [paulirish](https://github.com/paulirish/dotfiles/). I frequently hack these files to the point where I've given up on trying to keep it synced upstream. 
+
 
 ## Setup
+
+* [Fork paul's repository](https://github.com/paulirish/dotfiles#fork-destination-box). Don't use mine unless you are me, and even then, reconsider.
+
+The remainder of this document is hacked to pieces.
+
 #### installing & using
 
 * fork this to your own acct
