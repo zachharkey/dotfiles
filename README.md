@@ -1,14 +1,10 @@
-# Zach's dotfiles
+# Paul's dotfiles
 
-* I maintain this repo as *my* dotfiles. I forked it from [paulirish](https://github.com/paulirish/dotfiles/). I frequently hack these files to the point where I've given up on trying to keep it synced upstream. 
-
+* I maintain this repo as *my* dotfiles, but I'm keenly aware people are using it for theirs.
+* You're quite welcome to make suggestions, however I may decline if it's not of personal value to me.
+* If you're starting off consider forking [mathias](https://github.com/mathiasbynens/dotfiles/) or [alrra](https://github.com/alrra/dotfiles/). [paulmillr](https://github.com/paulmillr/dotfiles) and [gf3](https://github.com/gf3/dotfiles) also have great setups
 
 ## Setup
-
-* [Fork paul's repository](https://github.com/paulirish/dotfiles#fork-destination-box). Don't use mine unless you are me, and even then, reconsider.
-
-The remainder of this document is hacked to pieces.
-
 #### installing & using
 
 * fork this to your own acct
@@ -23,6 +19,9 @@ The remainder of this document is hacked to pieces.
 * commit/push changes you want.
 * you can also hypothetically cherry-pick commits from me and mathias and our fork ecosystem.
 
+#### shell
+
+This repo contains config for bash, zsh, and fish. As of March 2016, I'm using fish shell mostly, but fall back to bash once in a while. The bash and fish stuff are both well maintained; zsh, less so.
 
 
 ## my favorite parts.
@@ -59,7 +58,6 @@ Lastly, I use `open .` to open Finder from this path. (That's just available nor
 ## overview of files
 
 ####  Automatic config
-* `.sift.conf` - sift (faster than grep, ack, ag)
 * `.vimrc`, `.vim` - vim config, obv.
 * `.inputrc` - behavior of the actual prompt line
 
@@ -70,7 +68,7 @@ Lastly, I use `open .` to open Finder from this path. (That's just available nor
 * `.bashrc`
 * `.exports`
 * `.functions`
-* `.extra` - not included, explained above
+* `.extra` - not included, explained below
 
 #### manual run
 * `setup-a-new-machine.sh` - random apps i need installed

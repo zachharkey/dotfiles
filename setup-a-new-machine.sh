@@ -30,6 +30,7 @@ cp -R ~/.gnupg ~/migration/home
 cp /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist ~/migration  # wifi
 
 cp ~/Library/Preferences/net.limechat.LimeChat.plist ~/migration
+cp ~/Library/Preferences/com.tinyspeck.slackmacgap.plist ~/migration
 
 cp -R ~/Library/Services ~/migration # automator stuff
 
@@ -136,13 +137,19 @@ bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
 
 # Type `git open` to open the GitHub page or website for a repository.
 npm install -g git-open
+
+# fancy listing of recent branches
+npm install -g git-recent
+
+# sexy git diffs
+npm install -g diff-so-fancy
+
 # trash as the safe `rm` alternative
 npm install --global trash-cli
 
 
 # github.com/rupa/z   - oh how i love you
 git clone https://github.com/rupa/z.git ~/code/z
-chmod +x ~/code/z/z.sh
 # consider reusing your current .z file if possible. it's painful to rebuild :)
 # z is hooked up in .bash_profile
 
@@ -166,7 +173,8 @@ sudo easy_install Pygments
 
 # change to bash 4 (installed by homebrew)
 BASHPATH=$(brew --prefix)/bin/bash
-sudo echo $BASHPATH >> /etc/shells
+#sudo echo $BASHPATH >> /etc/shells
+sudo bash -c 'echo $(brew --prefix)/bin/bash >> /etc/shells'
 chsh -s $BASHPATH # will set for current user only.
 echo $BASH_VERSION # should be 4.x not the old 3.2.X
 # Later, confirm iterm settings aren't conflicting.
@@ -214,6 +222,8 @@ sh .osx
 
 # symlink it up!
 ./symlink-setup.sh
+
+# add manual symlink for .ssh/config and probably .config/fish
 
 ###
 ##############################################################################################################

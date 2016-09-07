@@ -87,16 +87,18 @@ fi;
 
 # homebrew completion
 if  which brew > /dev/null; then
-    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+    source "$(brew --prefix)/etc/bash_completion.d/brew"
+fi;
+
+# hub completion
+if  which hub > /dev/null; then
+    source "$(brew --prefix)/etc/bash_completion.d/hub.bash_completion.sh";
 fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type __git_complete &> /dev/null; then
     __git_complete g __git_main
 fi;
-
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
@@ -116,3 +118,9 @@ shopt -s cdspell;
 
 
 
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/paulirish/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/paulirish/google-cloud-sdk/completion.bash.inc'
